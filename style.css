@@ -49,14 +49,27 @@ table {
 
 body{
 
-	background: #bdc3c7; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #ffd89b; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #ffd89b , #19547b); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #ffd89b , #19547b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: #F8F8FF;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+h1{
+	text-align: center;
+	font-size: 54px;
+	line-height: 1.2;
+	margin: auto;
+    width: 50%;
+}
+
+
 p{
-	margin-top: 6px;
+
+	margin: auto;
+    width: 50%;
 }
     
 
+	
