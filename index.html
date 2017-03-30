@@ -3,20 +3,31 @@
 <head>
 	<meta charset="utf-8">
 	<title>Hello World</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css"
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 
 <body>
 <header class="header">
 
 	<div class="title">
-		<h1>HELLO WORLD</h1>
+		<h3>HELLO WORLD</h3>
 	</div>
 
 </header>
 	
-	<div class="paragraph">
+	
 		<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.</p>
+	
+	<div class="form">
+		
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select File:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Transfer" name="submit">
+</form>
+
+
 	</div>
 
 	<footer class="footer">
