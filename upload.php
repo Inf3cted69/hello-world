@@ -1,17 +1,21 @@
 <?php 
-//Load the settings
-require_once("opcje.php");
- 
-$message = "";
-if(isset($_FILES['file']))
-{
-$target_path = Settings::$uploadFolder;
-$target_path = $target_path . time() . '_' . basename( $_FILES['file']['name']);
+$ftp_server = "192.168.1.12";
+$ftp_nazwa = "win7";
+$ftp_haslo = "chceloda1";
 
-if(move_uploaded_file($_FILES['file']['tmp_name'], $target_path)) {
-            $message = "Plik ".  basename( $_FILES['file']['name']). 
-            " zosta� wstawiony";
-        } else{
-            $message = "Wyst�pi� b��d, spr�buj ponownie";
-        }
+$polaczenie = ftp_connect($ftp_server) or die("Nie mogłem połączyć się z serwerem");
+
+if(@ftp_login($polaczenie,$ftp_nazwa,$ftp_haslo))
+{
+	echo "Połączono z bazą";
 }
+else
+{
+	echo "Nie mogłem połączyć się z serwerem";
+}
+$plik=$_FILES["fileToUpload"]["name"];
+$miejsce = "/".$plik;
+ftp_put($polaczenie,$miejsce,$_FILES["fileToUpload"]["tmp_name"],FTP_ASCII);
+ftp_close($polaczenie);
+echo "Koniec Połączenia";
+?>
